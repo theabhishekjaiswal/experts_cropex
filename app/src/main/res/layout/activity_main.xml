@@ -30,5 +30,71 @@
         android:id="@+id/recyclerView"
         android:scrollbars="vertical"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#F2EAD3"
+        android:layout_alignParentBottom="true"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/home"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_home_24"
+                android:layout_marginTop="4dp"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Home"
+                android:textColor="@color/primary_green"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/post"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_post_add_24"
+                android:layout_marginTop="4dp"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Add Posts"
+                android:textColor="@color/primary_green"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
 
 </RelativeLayout>

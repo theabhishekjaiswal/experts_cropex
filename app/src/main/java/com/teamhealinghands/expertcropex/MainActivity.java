@@ -9,7 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,7 +32,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseApp.initializeApp(MainActivity.this);
         setContentView(R.layout.activity_main);
+
+        LinearLayout home= findViewById(R.id.home);
+        LinearLayout post = findViewById(R.id.post);
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inext = new Intent(MainActivity.this,MainActivity.class);
+                startActivity(inext);
+            }
+        });
+
+        post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inext = new Intent(MainActivity.this,post.class);
+                startActivity(inext);
+            }
+        });
 
         recyclerView = findViewById(R.id.recyclerView);
         searchView = findViewById(R.id.search);
